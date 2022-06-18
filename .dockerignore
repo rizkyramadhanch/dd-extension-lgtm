@@ -1,1 +1,4 @@
 ui/node_modules
+.vscode/
+*.log
+settings.json
