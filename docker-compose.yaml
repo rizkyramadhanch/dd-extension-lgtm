@@ -3,13 +3,13 @@ services:
     image: ${DESKTOP_PLUGIN_IMAGE}
 
   loki:
-    image: cedricziel/dd-extension-lgtm-loki:dev
+    image: rizkyramadhanch/dd-extension-lgtm-loki:dev
     command: -config.file=/etc/loki/local-config.yaml
     environment:
       - JAEGER_AGENT_HOST=otelcol
 
   grafana:
-    image: cedricziel/dd-extension-lgtm-grafana:dev
+    image: rizkyramadhanch/dd-extension-lgtm-grafana:dev
     container_name: dd-grafana
     restart: unless-stopped
     ports:
@@ -28,11 +28,11 @@ services:
       - mimir
 
   tempo:
-    image: cedricziel/dd-extension-lgtm-tempo:dev
+    image: rizkyramadhanch/dd-extension-lgtm-tempo:dev
     command: [ "-config.file=/etc/tempo.yaml" ]
 
   mimir:
-    image: cedricziel/dd-extension-lgtm-mimir:dev
+    image: rizkyramadhanch/dd-extension-lgtm-mimir:dev
     container_name: dd-mimir
     restart: unless-stopped
     command: --config.file=/etc/mimir/demo.yaml
@@ -45,7 +45,7 @@ services:
     command: -config.file=/etc/promtail/config.yml
 
   otelcol:
-    image: cedricziel/dd-extension-lgtm-otelcol:dev
+    image: rizkyramadhanch/dd-extension-lgtm-otelcol:dev
     container_name: dd-otelcol
     restart: unless-stopped
     ports:

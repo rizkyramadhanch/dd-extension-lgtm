@@ -28,12 +28,12 @@ LABEL org.opencontainers.image.title="Grafana LGTM" \
     org.opencontainers.image.description="Grafana LGTM in Docker Desktop" \
     org.opencontainers.image.vendor="Cedric Ziel" \
     com.docker.desktop.extension.api.version=">= 0.2.3" \
-    com.docker.desktop.extension.icon="https://github.com/cedricziel/dd-extension-lgtm/blob/main/docker.svg" \
-    com.docker.extension.screenshots="https://github.com/cedricziel/dd-extension-lgtm/blob/main/images/splash.png" \
+    com.docker.desktop.extension.icon="https://github.com/rizkyramadhanch/dd-extension-lgtm/blob/main/docker.svg" \
+    com.docker.extension.screenshots="https://github.com/rizkyramadhanch/dd-extension-lgtm/blob/main/images/splash.png" \
     com.docker.extension.detailed-description="Grafanas Loki, Grafana, Tempo, Mimir and the OpenTelemetry collector right in Docker Desktop" \
-    com.docker.extension.publisher-url="https://github.com/cedricziel/dd-extension-lgtm" \
+    com.docker.extension.publisher-url="https://github.com/rizkyramadhanch/dd-extension-lgtm" \
     com.docker.extension.additional-urls="" \
-    com.docker.extension.changelog="https://github.com/cedricziel/dd-extension-lgtm"
+    com.docker.extension.changelog="https://github.com/rizkyramadhanch/dd-extension-lgtm"
 
 COPY --from=builder /backend/bin/service /
 COPY docker-compose.yaml .
